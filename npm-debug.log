@@ -1,0 +1,44 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run-script',
+1 verbose cli   'version' ]
+2 info using npm@2.15.5
+3 info using node@v4.4.5
+4 verbose run-script [ 'preversion', 'version', 'postversion' ]
+5 info preversion shaibo10@2.2.8
+6 verbose unsafe-perm in lifecycle true
+7 info version shaibo10@2.2.8
+8 verbose unsafe-perm in lifecycle true
+9 info shaibo10@2.2.8 Failed to exec version script
+10 verbose stack Error: shaibo10@2.2.8 version: `gulp minify && ./tasks/bower-version-bump && git add -A .`
+10 verbose stack Exit status 1
+10 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:217:16)
+10 verbose stack     at emitTwo (events.js:87:13)
+10 verbose stack     at EventEmitter.emit (events.js:172:7)
+10 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+10 verbose stack     at emitTwo (events.js:87:13)
+10 verbose stack     at ChildProcess.emit (events.js:172:7)
+10 verbose stack     at maybeClose (internal/child_process.js:827:16)
+10 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+11 verbose pkgid shaibo10@2.2.8
+12 verbose cwd C:\Users\shaibo\Documents\github\angular-social-shai\angular-socialshare
+13 error Windows_NT 10.0.14393
+14 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run-script" "version"
+15 error node v4.4.5
+16 error npm  v2.15.5
+17 error code ELIFECYCLE
+18 error shaibo10@2.2.8 version: `gulp minify && ./tasks/bower-version-bump && git add -A .`
+18 error Exit status 1
+19 error Failed at the shaibo10@2.2.8 version script 'gulp minify && ./tasks/bower-version-bump && git add -A .'.
+19 error This is most likely a problem with the shaibo10 package,
+19 error not with npm itself.
+19 error Tell the author that this fails on your system:
+19 error     gulp minify && ./tasks/bower-version-bump && git add -A .
+19 error You can get information on how to open an issue for this project with:
+19 error     npm bugs shaibo10
+19 error Or if that isn't available, you can get their info via:
+19 error
+19 error     npm owner ls shaibo10
+19 error There is likely additional logging output above.
+20 verbose exit [ 1, true ]
