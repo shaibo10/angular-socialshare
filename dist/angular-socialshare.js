@@ -6,7 +6,7 @@
  * http://720kb.github.io/angular-socialshare
  * 
  * MIT license
- * Thu Sep 29 2016
+ * Mon Oct 10 2016
  */
 /*global angular*/
 /*eslint no-loop-func:0, func-names:0*/
@@ -481,7 +481,7 @@
         urlString += '&bcc=' + encodeURIComponent(attrs.socialshareBcc);
       }
 
-      $window.open(urlString, '_blank');
+      $window.open(urlString, '_top');
     }
     , facebookMessengerShare = function facebookMessengerShare($window, attrs, element) {
 
@@ -775,7 +775,7 @@
         , urlString = 'sms:' + toPhoneNumber + '?&body=' + body;
 
       element.attr('href', urlString);
-      element.attr('target', '_blank');
+      element.attr('target', '_top');
     }
     , manageViberShare = function manageViberShare($window, attrs, element) {
 
