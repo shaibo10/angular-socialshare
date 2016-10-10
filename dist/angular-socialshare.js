@@ -759,7 +759,6 @@
     , manageWhatsappShare = function manageWhatsappShare($window, attrs, element) {
 
       var href = 'whatsapp://send?text=' + encodeURIComponent(attrs.socialshareText + ' ') + encodeURIComponent(attrs.socialshareUrl || $window.location.href);
-
       element.attr('href', href);
       element.attr('target', '_top');
 
@@ -837,7 +836,7 @@
       //**** viber can't share without an element clicked (href)
       //this.viberShare = manageViberShare;
       //**** whatsapp can't share without an element clicked (href)
-      //this.whatsappShare = manageWhatsappShare;
+      this.whatsappShare = manageWhatsappShare;
       this.skypeShare = skypeShare;
       this.smsShare = manageSmsShare;
 
@@ -936,6 +935,10 @@
             this.flipboardShare($window, serviceShareConf.attrs);
             break;
           }
+          case 'whatsapp': {
+            this.whatsappShare($window, serviceShareConf.attrs);
+            break;
+          }
           default: {
             return;
           }
@@ -995,7 +998,6 @@
         attrs.socialshareSubject = attrs.socialshareSubject || configurationElement.conf.subject;
         attrs.socialshareCc = attrs.socialshareCc || configurationElement.conf.cc;
         attrs.socialshareBcc = attrs.socialshareBcc || configurationElement.conf.bcc;
-
         if (attrs.socialshareTrigger) {
 
           element.bind(attrs.socialshareTrigger, onEventTriggered);
