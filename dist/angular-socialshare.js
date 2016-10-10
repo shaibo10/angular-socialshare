@@ -257,7 +257,8 @@
         'provider': 'whatsapp',
         'conf': {
           'url': '',
-          'text': ''
+          'text': '',
+          'trigger': 'click'
         }
       },
       {
